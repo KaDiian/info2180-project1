@@ -46,6 +46,10 @@ li:hover{
     background-color: #E2E8F0 ;
     grid-area: overview-hero;
 }
+.overview-hero img{
+    width: 350px; height: 250px;
+    float: left;
+}
 .learn-about{
     grid-area: learn-about;
 }
