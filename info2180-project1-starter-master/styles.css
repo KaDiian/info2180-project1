@@ -12,19 +12,16 @@ body {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /*grid-template-areas: 
-    "header header header" 
-    "overview-hero overview-hero overview-hero"
-    "learn-about learn-about learn-about" 
-    "testing testing testing"
-    "stories stories stories"
-    "newsletter newsletter newsletter"
-    "footer footer footer";*/
-
 }
+/*Header Section*/
 header{
     background-color: white; 
     padding-top: 50px;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 header h1{ 
     font-size: 18px;
@@ -47,22 +44,25 @@ header nav a{
 a:hover{
     color: #5A67D8;
 }
+/*Overview-hero Section*/
 .overview-hero{
     background-color: #E2E8F0 ;
-   
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
-.overview-hero img{
+.overview-hero .container{
+    display: flex;
+}
+.overview-hero .container img{
     width: 350px; height: 250px;
     float: left;
-   
 }
 .overview-hero-text {
-    float: right;
+    max-width: 500px;
+    padding-top: 40px;
 }
-.learn-about{
-    grid-area: learn-about;
+/*Learn-about Section*/
+.learn-about .container{
     padding-top: 40px;
     padding-bottom: 70px;
 }
@@ -92,12 +92,16 @@ a:hover{
     height: 450px;
     padding-left: 10px;
 }
-
-.testing{
-    grid-area: testing;
+/*Testing Section*/
+.testing {
     background-color: #4A5568;
     padding-top: 60px;
     padding-bottom: 60px;
+    display: grid;
+}
+.testing .container {
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
 }
 .testing .cta a{
     background-color: #48BB78;
@@ -111,29 +115,24 @@ a:hover{
     float: right;
 }
 .testing-desciption h2 {
-    float: left;
+   
     color: white;
 }
 .testing .testing-desciption p {
-    float: left;
+   align-items: center;
     color: white;
+    max-width: 550px;
 }
-.stories{
-    grid-area: stories;
-}
-.article{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 2rem;
-}
-.stories .article-body{
-    float: right;
-    max-width: 450%;
-    display: inline;
+/*Recent Stories Section*/
+article{
+    display: flex;
 }
 .stories img{
-    width: 300px; height: 300px;
+    width: 50em; height: 15em;
     border-radius: 100%;
+    padding-bottom: 50px;
+    padding-right: 80px;
+    float: left;
 }
 .stories h2{
     color: #48BB78;
@@ -144,17 +143,18 @@ a:hover{
     text-decoration: none;
 }
 .newsletter{
-    text-align: center;
-    justify-self: center;
-    background-color:#48BB78;
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-.newsletter .container {
     color: white;
+    background-color:#48BB78;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    text-align: center;
 }
 .form-group{
     display: inline-block;
+}
+.newsletter p{
+    max-width: 450px;
+    justify-self: center;
 }
 .newsletter button{
     background-color:#5A67D8;
@@ -167,8 +167,8 @@ a:hover{
 .newsletter .container .submit .btn{
     background-color:#5A67D8;
 }
+/*Footer*/
 footer{
-    grid-area: footer;
     background-color: #4A5568;
 }
 footer p{
